@@ -1,0 +1,30 @@
+.#{$v}- {
+  &layout {
+  }
+  &wrapper {
+  }
+  &container {
+    display: flex;
+    height: 100vh;
+    min-height: 300px;
+    overflow: hidden;
+  }
+  &aside {
+    &__content {
+      overflow-y: auto;
+      height: 100%;
+      box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+  }
+  &main {
+    flex: 1;
+
+    &__content {
+      overflow-y: auto;
+      height: 100%;
+      background: $black-50;
+    }
+  }
+}

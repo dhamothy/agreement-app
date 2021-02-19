@@ -1,0 +1,51 @@
+.#{$v}-nav {
+  width: 220px;
+  min-height: 100%;
+
+  &__ {
+    &wrapper {
+    }
+    &header {
+      padding: 32px;
+    }
+    &brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: $white;
+      color: $black-1000;
+      padding: 8px 12px;
+      text-align: center;
+      border-radius: $radius-st;
+      transition: all 0.2s;
+
+      &- {
+        &icon {
+          height: 20px;
+        }
+        &name {
+          font-size: $fs-body;
+          font-weight: $fw-700;
+          margin-left: 4px;
+        }
+      }
+
+      &:hover {
+        background: rgba($black, 0.1);
+        color: $white;
+      }
+    }
+    &link {
+      display: flex;
+      padding: 16px 32px;
+      cursor: pointer;
+      font-size: $fs-title;
+      font-weight: $fw-700;
+
+      &.router-link-active {
+        background: rgba($black, 0.1);
+      }
+    }
+  }
+}
