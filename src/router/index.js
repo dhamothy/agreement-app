@@ -44,6 +44,15 @@ const routes = [
     props: true
   },
   {
+    path: "/transfer/:id/edit",
+    name: "TransferEdit",
+    component: () =>
+      import(
+        /* webpackChunkName: "transfer-edit" */ "../components/TransferEdit.vue"
+      ),
+    props: true
+  },
+  {
     path: "/reports",
     name: "Reports",
     component: () =>

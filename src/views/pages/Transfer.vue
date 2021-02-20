@@ -1,5 +1,5 @@
 <template>
-  <div class="py-16 px-8">
+  <div class="py-6">
     <div class="bg-white rounded-md shadow-sm">      
       <table class="table-auto w-full text-left">
         <thead>
