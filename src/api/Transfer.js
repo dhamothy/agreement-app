@@ -1,7 +1,10 @@
 import Api from "@/api/Api";
 
 export default {
-  fetch() {
-    return Api().get(`/`);
-  }
+  fetchAll() {
+    return Api().get(`/transfer`);
+  },
+  fetch(id) {
+    return Api().get(`/transfer/${id}`);
+  },
 };

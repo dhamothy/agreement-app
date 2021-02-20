@@ -9,8 +9,7 @@
       <div class="av-nav__content">
         <div class="av-nav__links">          
           <router-link :to="link.route" 
-            class="av-nav__link" 
-            :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']"
+            class="av-nav__link"            
             v-for="link in links" 
             :key="link.route.name" 
             exact>            

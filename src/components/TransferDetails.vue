@@ -11,24 +11,24 @@
           </div>
         </div>
         <div class="av-page__content py-6 px-8 md:px-16 2xl:px-20">
-          <div class="ac-section">
-            <div class="text-xl text-indigo-500 mb-4 font-semibold">Create your first transfer agreement</div>
+          <div class="ac-sections 2xl:w-11/12">
+            <div class="text-xl text-indigo-700 mb-4 font-semibold">Create your first transfer agreement</div>
             <div class="ac-section bg-gray-100 shadow-lg">
               <div class="bg-white font-semibold rounded-t-sm shadow-md lg:shadow-lg rounded-b-lg py-4 px-6 z-10">
                 <div class="text-black font-medium text-xl mb-3">Transfer Agreement #{{ id }}</div>
                 <hr class="border-dotted border-gray-400">
                 <div class="grid md:grid-cols-2 xl:grid-cols-3 mt-3">
                   <div>
-                    <div class="text-indigo-400 mt-4 xl:mt-0">Buyer's Email</div>
-                    <div class="mt-1">albertyeong@email.com</div>
+                    <div class="text-indigo-500 mt-4 xl:mt-0">Buyer's Email</div>
+                    <div class="mt-1">{{ transfer.email }}</div>
                   </div>
                   <div>
-                    <div class="text-indigo-400 mt-4 xl:mt-0">Exporting To</div>
-                    <div class="mt-1">Singapore</div>
+                    <div class="text-indigo-500 mt-4 xl:mt-0">Exporting To</div>
+                    <div class="mt-1">{{ transfer.country }}</div>
                   </div>
                   <div>
-                    <div class="text-indigo-400 mt-4 xl:mt-0">Invoice Amount</div>
-                    <div class="mt-1">USD 20, 000</div>
+                    <div class="text-indigo-500 mt-4 xl:mt-0">Invoice Amount</div>
+                    <div class="mt-1">{{ transfer.price }}</div>
                   </div>
                 </div>
               </div>
@@ -41,21 +41,21 @@
                   <div>
                     <div class="font-semibold mt-4 xl:mt-0">Company</div>
                     <div>
-                      <div>Tiong Hoe Trading Company Pte Ltd</div>
-                      <div>Singapore</div>
+                      <div>{{ transfer.company }}</div>
+                      <div>{{ transfer.country }}</div>
                     </div>
                   </div>
                   <div>
                     <div class="font-semibold mt-4 xl:mt-0">Contact Person</div>
                     <div>
-                      <div>Albert Yeong</div>
-                      <div>albertyeong@email.com</div>
+                      <div>{{ transfer.firstName }} {{ transfer.lastName }}</div>
+                      <div>{{ transfer.email }}</div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="pb-4 pt-6 px-6 xl:max-w-xl">
-                <div class="text-xl text-indigo-500 mb-3 font-semibold">Product Details</div>
+                <div class="text-xl text-indigo-700 mb-3 font-semibold">Product Details</div>
                 <div class="text-sm text-gray-500 font-semibold mb-3">Placeholder for subtitle</div>
                 <hr class="border-gray-200 mb-4">
                 <div class="text-xl font-semibold text-gray-600 mb-2">Upload your Proforma Invoice</div>
@@ -95,9 +95,17 @@
 </template>
 <script>
 export default{
-  props: ['id']
+  props: ['id'],
+  computed:{
+    transfer(){
+      return this.$store.state.transfer;
+    }
+  },
+  mounted(){
+    this.$store.dispatch('getTransfer', this.id);
+  }
 }
 </script>
 <style lang="scss" scoped>
-
+  
 </style>
