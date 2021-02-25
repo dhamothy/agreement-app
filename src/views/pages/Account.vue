@@ -1,10 +1,6 @@
 <template>
-  <div class="py-16 px-8">
-    <div class="bg-white rounded-md px-5 shadow-sm">
-      <div class="text-lg">
-        Account 
-      </div>
-    </div>
+  <div class="bg-white rounded-md px-8 py-12 shadow-sm text-lg">
+    Account     
   </div>
 </template>
 <script>

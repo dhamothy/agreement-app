@@ -7,4 +7,7 @@ export default {
   fetch(id) {
     return Api().get(`/transfer/${id}`);
   },
+  put(id) {
+    return Api().put(`/transfer/${id}`);
+  },
 };

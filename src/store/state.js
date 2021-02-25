@@ -1,4 +1,5 @@
 export default{
   transfers: [],
-  transfer: null
+  transfer: null,
+  transferUploads: []
 }
