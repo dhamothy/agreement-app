@@ -61,14 +61,6 @@ const routes = [
       )
   },
   {
-    path: "/upload",
-    name: "UploadFull",
-    component: () =>
-      import(
-        /* webpackChunkName: "transfer-edit" */ "../components/UploadFull.vue"
-      )
-  },
-  {
     path: "*",
     name: "404",
     component: () =>
